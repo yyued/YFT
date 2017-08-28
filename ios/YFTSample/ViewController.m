@@ -17,15 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [YFTImage imageNamed:@"pop_score_big" canvasSize:CGSizeMake(300, 66) andText:@"123" letterSpace:20 textAlignment:NSTextAlignmentCenter];
-    // Do any additional setup after loading the view, typically from a nib.
+    UIImage *textImage = [YFTImage imageNamed:@"pop_score_big"
+                                   canvasSize:CGSizeMake(300, 66)
+                                      andText:@"123"
+                                  letterSpace:-2
+                                textAlignment:NSTextAlignmentCenter];
+    NSLog(@"%@", textImage);
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end

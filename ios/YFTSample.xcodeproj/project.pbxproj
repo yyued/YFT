@@ -13,6 +13,11 @@
 		905708561F53B8CC00D5EC05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 905708541F53B8CC00D5EC05 /* Main.storyboard */; };
 		905708581F53B8CC00D5EC05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 905708571F53B8CC00D5EC05 /* Assets.xcassets */; };
 		9057085B1F53B8CC00D5EC05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 905708591F53B8CC00D5EC05 /* LaunchScreen.storyboard */; };
+		9063AC6A1F53EB1900B305AB /* YFTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9063AC691F53EB1900B305AB /* YFTLabel.m */; };
+		9063AC6F1F53EDA400B305AB /* pop_score_middle.yft in Resources */ = {isa = PBXBuildFile; fileRef = 9063AC6B1F53EDA400B305AB /* pop_score_middle.yft */; };
+		9063AC701F53EDA400B305AB /* pop_score_middle2.yft in Resources */ = {isa = PBXBuildFile; fileRef = 9063AC6C1F53EDA400B305AB /* pop_score_middle2.yft */; };
+		9063AC711F53EDA400B305AB /* pop_score_small.yft in Resources */ = {isa = PBXBuildFile; fileRef = 9063AC6D1F53EDA400B305AB /* pop_score_small.yft */; };
+		9063AC721F53EDA400B305AB /* pop_score_small2.yft in Resources */ = {isa = PBXBuildFile; fileRef = 9063AC6E1F53EDA400B305AB /* pop_score_small2.yft */; };
 		90852FAE1F53C5DC00DA648F /* pop_score_big.yft in Resources */ = {isa = PBXBuildFile; fileRef = 90852FAD1F53C5DC00DA648F /* pop_score_big.yft */; };
 		90852FB11F53C60500DA648F /* YFTImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 90852FB01F53C60500DA648F /* YFTImage.m */; };
 		90852FB41F53C65F00DA648F /* YFTEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 90852FB31F53C65F00DA648F /* YFTEntity.m */; };
@@ -29,6 +34,12 @@
 		905708571F53B8CC00D5EC05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9057085A1F53B8CC00D5EC05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9057085C1F53B8CC00D5EC05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9063AC681F53EB1900B305AB /* YFTLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFTLabel.h; sourceTree = "<group>"; };
+		9063AC691F53EB1900B305AB /* YFTLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFTLabel.m; sourceTree = "<group>"; };
+		9063AC6B1F53EDA400B305AB /* pop_score_middle.yft */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pop_score_middle.yft; sourceTree = "<group>"; };
+		9063AC6C1F53EDA400B305AB /* pop_score_middle2.yft */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pop_score_middle2.yft; sourceTree = "<group>"; };
+		9063AC6D1F53EDA400B305AB /* pop_score_small.yft */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pop_score_small.yft; sourceTree = "<group>"; };
+		9063AC6E1F53EDA400B305AB /* pop_score_small2.yft */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pop_score_small2.yft; sourceTree = "<group>"; };
 		90852FAD1F53C5DC00DA648F /* pop_score_big.yft */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pop_score_big.yft; sourceTree = "<group>"; };
 		90852FAF1F53C60500DA648F /* YFTImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFTImage.h; sourceTree = "<group>"; };
 		90852FB01F53C60500DA648F /* YFTImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFTImage.m; sourceTree = "<group>"; };
@@ -94,6 +105,8 @@
 			children = (
 				90852FAF1F53C60500DA648F /* YFTImage.h */,
 				90852FB01F53C60500DA648F /* YFTImage.m */,
+				9063AC681F53EB1900B305AB /* YFTLabel.h */,
+				9063AC691F53EB1900B305AB /* YFTLabel.m */,
 				90852FB21F53C65F00DA648F /* YFTEntity.h */,
 				90852FB31F53C65F00DA648F /* YFTEntity.m */,
 			);
@@ -103,6 +116,10 @@
 		90852FAC1F53C5DC00DA648F /* YFTs */ = {
 			isa = PBXGroup;
 			children = (
+				9063AC6B1F53EDA400B305AB /* pop_score_middle.yft */,
+				9063AC6C1F53EDA400B305AB /* pop_score_middle2.yft */,
+				9063AC6D1F53EDA400B305AB /* pop_score_small.yft */,
+				9063AC6E1F53EDA400B305AB /* pop_score_small2.yft */,
 				90852FAD1F53C5DC00DA648F /* pop_score_big.yft */,
 			);
 			name = YFTs;
@@ -168,8 +185,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9063AC701F53EDA400B305AB /* pop_score_middle2.yft in Resources */,
+				9063AC721F53EDA400B305AB /* pop_score_small2.yft in Resources */,
 				9057085B1F53B8CC00D5EC05 /* LaunchScreen.storyboard in Resources */,
+				9063AC711F53EDA400B305AB /* pop_score_small.yft in Resources */,
 				90852FAE1F53C5DC00DA648F /* pop_score_big.yft in Resources */,
+				9063AC6F1F53EDA400B305AB /* pop_score_middle.yft in Resources */,
 				905708581F53B8CC00D5EC05 /* Assets.xcassets in Resources */,
 				905708561F53B8CC00D5EC05 /* Main.storyboard in Resources */,
 			);
@@ -182,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9063AC6A1F53EB1900B305AB /* YFTLabel.m in Sources */,
 				905708531F53B8CC00D5EC05 /* ViewController.m in Sources */,
 				905708501F53B8CC00D5EC05 /* AppDelegate.m in Sources */,
 				90852FB41F53C65F00DA648F /* YFTEntity.m in Sources */,

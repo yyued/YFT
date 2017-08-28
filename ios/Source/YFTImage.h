@@ -16,4 +16,10 @@
             letterSpace:(CGFloat)letterSpace
           textAlignment:(NSTextAlignment)textAlignment;
 
++ (UIImage *)imageWithData:(NSData *)data
+                canvasSize:(CGSize)canvasSize
+                   andText:(NSString *)argText
+               letterSpace:(CGFloat)letterSpace
+             textAlignment:(NSTextAlignment)textAlignment;
+
 @end
