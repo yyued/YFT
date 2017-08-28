@@ -39,7 +39,7 @@ UIImage *textImage = [YFTImage imageNamed:@"pop_score_big"
                             textAlignment:NSTextAlignmentCenter];
 ```
 
-Label 的使用方法，参照本 GitHub Sample。
+Label 的使用方法，参照本 Repo Sample。
 
 ### 集成至 Android
 
@@ -55,6 +55,6 @@ try {
 }
 ```
 
-Label 的使用方法，参照本 GitHub Sample。
+Label 的使用方法，参照本 Repo Sample。
 
 
