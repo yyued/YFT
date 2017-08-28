@@ -28,4 +28,6 @@
                        letterSpace:(CGFloat)letterSpace
                      textAlignment:(NSTextAlignment)textAlignment;
 
+- (CGSize)textBounds:(NSString *)argText letterSpace:(CGFloat)letterSpace;
+
 @end

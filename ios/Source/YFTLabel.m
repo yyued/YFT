@@ -41,4 +41,11 @@
     }
 }
 
+- (CGSize)intrinsicContentSize {
+    if (self.text != nil && self.yftItem != nil) {
+        return [self.yftItem textBounds:self.text letterSpace:self.yftLetterSpace];
+    }
+    return CGSizeZero;
+}
+
 @end

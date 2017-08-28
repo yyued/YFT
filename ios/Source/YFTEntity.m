@@ -98,4 +98,17 @@
     return [positions copy];
 }
 
+- (CGSize)textBounds:(NSString *)argText
+         letterSpace:(CGFloat)letterSpace {
+    CGPoint lastPoint = CGPointZero;
+    for (NSInteger i = 0; i < argText.length; i++) {
+        NSString *character = [argText substringWithRange:NSMakeRange(i, 1)];
+        if (self.characters[character] != nil) {
+            lastPoint.y = MAX(lastPoint.y, self.characters[character].size.height);
+            lastPoint.x += self.characters[character].size.width + letterSpace;
+        }
+    }
+    return CGSizeMake(lastPoint.x - letterSpace, lastPoint.y);
+}
+
 @end
