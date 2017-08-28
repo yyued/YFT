@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         try {
-            Bitmap bitmap = YFTImage.create(this, "pop_score_big", 300 * 3, 66 * 3, getResources().getDisplayMetrics().density, "123", -2, 1);
+            Bitmap bitmap = YFTImage.create(this, "pop_score_big", 300 * getResources().getDisplayMetrics().density, 66 * getResources().getDisplayMetrics().density, getResources().getDisplayMetrics().density, "123", -2, 1);
         } catch (Exception e) {
             e.printStackTrace();
         }
