@@ -69,4 +69,17 @@ public class YFTEntity {
         return positions;
     }
 
+    public YFTPoint maxPoint(String text, float letterSpace) {
+        YFTPoint lastPoint = new YFTPoint(0, 0);
+        char[] chars = text.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            String character = String.valueOf(chars[i]);
+            if (null != mCharacters.get(character)) {
+                lastPoint.x += mCharacters.get(character).mWidth + letterSpace;
+                lastPoint.y = Math.max(lastPoint.y, mCharacters.get(character).mHeight);
+            }
+        }
+        return new YFTPoint(lastPoint.x - letterSpace, lastPoint.y);
+    }
+
 }

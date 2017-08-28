@@ -85,4 +85,17 @@ public class YFTLabel extends View {
             }
         }
     }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        if (mText != null && mItem != null) {
+            float scale = getResources().getDisplayMetrics().density;
+            YFTPoint maxPoint = mItem.maxPoint(mText, mLetterSpace);
+            setMeasuredDimension((int)(maxPoint.x * scale), (int)(maxPoint.y * scale));
+        }
+        else {
+            setMeasuredDimension(0,0);
+        }
+    }
+
 }
