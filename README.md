@@ -47,13 +47,13 @@ Label 的使用方法，参照本 GitHub Sample。
 
 将 yft 字体文件添加至 assets 目录下，在需要的地方，使用以下方式获得 Bitmap
 
-···
+```
 try {
     Bitmap bitmap = YFTImage.create(this, "pop_score_big", 300 * getResources().getDisplayMetrics().density, 66 * getResources().getDisplayMetrics().density, getResources().getDisplayMetrics().density, "123", -2, 1);
 } catch (Exception e) {
     e.printStackTrace();
 }
-···
+```
 
 Label 的使用方法，参照本 GitHub Sample。
 
