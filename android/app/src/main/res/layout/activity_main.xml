@@ -5,11 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.opensource.yftsample.MainActivity">
-
     <view
         android:id="@+id/testLabel"
         class="com.yy.opensource.yft.YFTLabel"
         id="@+id/view"
         android:layout_height="match_parent"
-        android:layout_width="match_parent" />
+        android:layout_width="match_parent"
+        app:yftAssetsNamed="pop_score_big"
+        app:yftText="123"
+        app:yftTextAlignment="center"
+        app:yftLetterSpace="-2" />
 </android.support.constraint.ConstraintLayout>

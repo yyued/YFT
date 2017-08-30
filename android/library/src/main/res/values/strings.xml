@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">YFT</string>
+    <declare-styleable name="YFTLabel">
+        <attr name="yftAssetsNamed" format="string" />
+        <attr name="yftText" format="string" />
+        <attr name="yftTextAlignment" format="enum">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+        <attr name="yftLetterSpace" format="integer" />
+    </declare-styleable>
 </resources>

@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         setContentView(R.layout.activity_main);
-        resetLabel();
+//        resetLabel(); // reset via code.
     }
 
     void resetLabel() {

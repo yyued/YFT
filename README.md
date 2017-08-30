@@ -11,6 +11,27 @@ YFT 是一个轻量级的字符渲染库，你可以使用 YFT 将字元拼接�
 
 * Web
 
+## 需求
+
+YFT 是为了应对自定义字体的兼容问题的，假设有以下字体[0-9]。
+![](https://github.com/yyued/YFT/blob/master/res/pop_score_big/0@3x.png?raw=true)
+![](https://github.com/yyued/YFT/blob/master/res/pop_score_big/1@3x.png?raw=true)
+![](https://github.com/yyued/YFT/blob/master/res/pop_score_big/2@3x.png?raw=true)
+![](https://github.com/yyued/YFT/blob/master/res/pop_score_big/3@3x.png?raw=true)
+![](https://github.com/yyued/YFT/blob/master/res/pop_score_big/4@3x.png?raw=true)
+![](https://github.com/yyued/YFT/blob/master/res/pop_score_big/5@3x.png?raw=true)
+![](https://github.com/yyued/YFT/blob/master/res/pop_score_big/6@3x.png?raw=true)
+![](https://github.com/yyued/YFT/blob/master/res/pop_score_big/7@3x.png?raw=true)
+![](https://github.com/yyued/YFT/blob/master/res/pop_score_big/8@3x.png?raw=true)
+![](https://github.com/yyued/YFT/blob/master/res/pop_score_big/9@3x.png?raw=true)
+
+使用 YFT，可以轻松地将这些字符拼接在一起，最输出成 UIImage(iOS) / Bitmap(Android)。
+
+同时，YFT 也提供一个类 Label / TextView 组件，用于直接显示在界面上。
+
+YFT 支持以下属性，textAlignment / letterSpace。
+YFT 不支持字体大小、字体颜色等的变更，本库只是对以上切图的简单合并。
+
 ## 使用
 
 ### 生成 YFT 字体文件

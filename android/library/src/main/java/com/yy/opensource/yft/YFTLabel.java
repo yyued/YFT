@@ -1,6 +1,7 @@
 package com.yy.opensource.yft;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -25,15 +26,43 @@ public class YFTLabel extends View {
 
     public YFTLabel(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        resetViaAttrs(context, attrs);
     }
 
     public YFTLabel(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        resetViaAttrs(context, attrs);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public YFTLabel(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
+        resetViaAttrs(context, attrs);
+    }
+
+    private void resetViaAttrs(Context context ,AttributeSet attrs) {
+        if (attrs != null) {
+            TypedArray typedArray = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.YFTLabel, 0, 0);
+            int count = typedArray.getIndexCount();
+            for(int i = 0; i < count; i++){
+                int styledAttr = typedArray.getIndex(i);
+                if (styledAttr == R.styleable.YFTLabel_yftAssetsNamed) {
+                    try {
+                        this.setYFTEntity(YFTEntity.createWithNamed(context, typedArray.getString(i)));
+                    } catch (Exception e) {}
+                }
+                else if (styledAttr == R.styleable.YFTLabel_yftText) {
+                    setText(typedArray.getString(i));
+                }
+                else if (styledAttr == R.styleable.YFTLabel_yftLetterSpace) {
+                    setLetterSpace(typedArray.getInt(i, 0));
+                }
+                else if (styledAttr == R.styleable.YFTLabel_yftTextAlignment) {
+                    setYFTTextAlignment(typedArray.getInt(i, 0));
+                }
+            }
+            typedArray.recycle();
+        }
     }
 
     private String mText;
