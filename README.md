@@ -26,7 +26,7 @@ YFT 是为了应对自定义字体的兼容问题的，假设有以下字体[0-9
 ![](https://github.com/yyued/YFT/blob/master/res/pop_score_big/8@3x.png?raw=true)
 ![](https://github.com/yyued/YFT/blob/master/res/pop_score_big/9@3x.png?raw=true)
 
-使用 YFT，可以轻松地将这些字符拼接在一起，最输出成 UIImage(iOS) / Bitmap(Android)。
+使用 YFT，可以轻松地将这些字符拼接在一起，并输出至 UIImage(iOS) / Bitmap(Android)。
 
 同时，YFT 也提供一个类 Label / TextView 组件，用于直接显示在界面上。
 
