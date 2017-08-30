@@ -14,6 +14,7 @@ YFT 是一个轻量级的字符渲染库，你可以使用 YFT 将字元拼接�
 ## 需求
 
 YFT 是为了应对自定义字体的兼容问题的，假设有以下字体[0-9]。
+
 ![](https://github.com/yyued/YFT/blob/master/res/pop_score_big/0@3x.png?raw=true)
 ![](https://github.com/yyued/YFT/blob/master/res/pop_score_big/1@3x.png?raw=true)
 ![](https://github.com/yyued/YFT/blob/master/res/pop_score_big/2@3x.png?raw=true)
