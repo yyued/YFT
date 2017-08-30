@@ -13,17 +13,24 @@
 
 + (UIImage *)imageNamed:(NSString *)name
              canvasSize:(CGSize)canvasSize
+                  scale:(CGFloat)scale
                 andText:(NSString *)argText
             letterSpace:(CGFloat)letterSpace
           textAlignment:(NSTextAlignment)textAlignment {
     YFTEntity *item = [YFTEntity createWithNamed:name];
-    NSArray *charPosition = [item charPositions:canvasSize andText:argText letterSpace:letterSpace textAlignment:textAlignment];
-    UIGraphicsBeginImageContextWithOptions(canvasSize, NO, [UIScreen mainScreen].scale);
+    NSArray *charPosition = [item charPositions:CGSizeMake(canvasSize.width / scale, canvasSize.height / scale)
+                                        andText:argText
+                                    letterSpace:letterSpace
+                                  textAlignment:textAlignment];
+    UIGraphicsBeginImageContextWithOptions(canvasSize, NO, 1.0);
     for (NSInteger i = 0; i < argText.length; i++) {
         NSString *character = [argText substringWithRange:NSMakeRange(i, 1)];
         if (item.characters[character] != nil) {
             YFTCharacter *characterItem = item.characters[character];
-            [characterItem.image drawInRect:CGRectMake([charPosition[i] CGPointValue].x, [charPosition[i] CGPointValue].y, characterItem.size.width, characterItem.size.height)];
+            [characterItem.image drawInRect:CGRectMake([charPosition[i] CGPointValue].x * scale,
+                                                       [charPosition[i] CGPointValue].y * scale,
+                                                       characterItem.size.width * scale,
+                                                       characterItem.size.height * scale)];
         }
     }
     UIImage *finalImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -33,17 +40,24 @@
 
 + (UIImage *)imageWithData:(NSData *)data
                 canvasSize:(CGSize)canvasSize
+                     scale:(CGFloat)scale
                    andText:(NSString *)argText
                letterSpace:(CGFloat)letterSpace
              textAlignment:(NSTextAlignment)textAlignment {
     YFTEntity *item = [YFTEntity createWithData:data];
-    NSArray *charPosition = [item charPositions:canvasSize andText:argText letterSpace:letterSpace textAlignment:textAlignment];
-    UIGraphicsBeginImageContextWithOptions(canvasSize, NO, [UIScreen mainScreen].scale);
+    NSArray *charPosition = [item charPositions:CGSizeMake(canvasSize.width / scale, canvasSize.height / scale)
+                                        andText:argText
+                                    letterSpace:letterSpace
+                                  textAlignment:textAlignment];
+    UIGraphicsBeginImageContextWithOptions(canvasSize, NO, 1.0);
     for (NSInteger i = 0; i < argText.length; i++) {
         NSString *character = [argText substringWithRange:NSMakeRange(i, 1)];
         if (item.characters[character] != nil) {
             YFTCharacter *characterItem = item.characters[character];
-            [characterItem.image drawInRect:CGRectMake([charPosition[i] CGPointValue].x, [charPosition[i] CGPointValue].y, characterItem.size.width, characterItem.size.height)];
+            [characterItem.image drawInRect:CGRectMake([charPosition[i] CGPointValue].x * scale,
+                                                       [charPosition[i] CGPointValue].y * scale,
+                                                       characterItem.size.width * scale,
+                                                       characterItem.size.height * scale)];
         }
     }
     UIImage *finalImage = UIGraphicsGetImageFromCurrentImageContext();

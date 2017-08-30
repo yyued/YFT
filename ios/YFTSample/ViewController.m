@@ -18,7 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     UIImage *textImage = [YFTImage imageNamed:@"pop_score_big"
-                                   canvasSize:CGSizeMake(300, 66)
+                                   canvasSize:CGSizeMake(300, 100)
+                                        scale:2
                                       andText:@"123"
                                   letterSpace:-2
                                 textAlignment:NSTextAlignmentCenter];

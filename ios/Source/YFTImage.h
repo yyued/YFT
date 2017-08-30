@@ -12,12 +12,14 @@
 
 + (UIImage *)imageNamed:(NSString *)name
              canvasSize:(CGSize)canvasSize
+                  scale:(CGFloat)scale
                 andText:(NSString *)argText
             letterSpace:(CGFloat)letterSpace
           textAlignment:(NSTextAlignment)textAlignment;
 
 + (UIImage *)imageWithData:(NSData *)data
                 canvasSize:(CGSize)canvasSize
+                     scale:(CGFloat)scale
                    andText:(NSString *)argText
                letterSpace:(CGFloat)letterSpace
              textAlignment:(NSTextAlignment)textAlignment;

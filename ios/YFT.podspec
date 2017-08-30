@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YFT"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "create Image and Label from Character-Bitmap."
   s.description  = <<-DESC
                    create Image and Label from Character-Bitmap.
